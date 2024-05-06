@@ -1,0 +1,12 @@
+# ninja log v5
+7	109	7367248195806850	CMakeFiles/Pyroeffect.dir/max6675/src/main.c.obj	e13e0aaf3b955baf
+0	111	7367248195816849	CMakeFiles/Pyroeffect.dir/max6675/src/Max6675_Temperature.c.obj	dd31cd334f84f62c
+13	114	7367248195846852	CMakeFiles/Pyroeffect.dir/max6675/src/receiving_data_max6675.c.obj	655b8117c665cf92
+114	284	7367248197120989	Pyroeffect.exe	43751e9095eed10f
+1	65	7367248835374890	CMakeFiles/Pyroeffect.dir/max6675/src/main.c.obj	e13e0aaf3b955baf
+65	172	7367248836110057	Pyroeffect.exe	43751e9095eed10f
+6	61	7367249073638538	CMakeFiles/Pyroeffect.dir/max6675/src/receiving_data_max6675.c.obj	655b8117c665cf92
+1	63	7367249073658535	CMakeFiles/Pyroeffect.dir/max6675/src/main.c.obj	e13e0aaf3b955baf
+63	167	7367249074384607	Pyroeffect.exe	43751e9095eed10f
+1	67	7367250941706590	CMakeFiles/Pyroeffect.dir/max6675/src/main.c.obj	e13e0aaf3b955baf
+68	177	7367250942450271	Pyroeffect.exe	43751e9095eed10f
