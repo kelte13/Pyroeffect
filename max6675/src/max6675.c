@@ -8,5 +8,5 @@ bool Max6675_Read_Reg(uint16_t *reg) {
 
 
     return
-    MAX6675_ERROR;
+        MAX6675_ERROR;
 }
