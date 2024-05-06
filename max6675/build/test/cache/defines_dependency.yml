@@ -1,3 +1,5 @@
 ---
-src/max6675.c:
+build/test/mocks/mock_HAL_SPI_Received.c:
+- TEST
+src/receiving_data_max6675.c:
 - TEST

@@ -10,6 +10,6 @@ int main()
     if (answer == MAX6675_OK) {
         temperature = Max6675_Temperature(reg);
     }
-    printf("%f", temperature);
+    printf("temp = %f", temperature);
     return 0;
 }

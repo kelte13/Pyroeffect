@@ -3,8 +3,9 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include "HAL_SPI_Received.h"
 
-//Псевдонимы
+//псевдопсевдонимы (в дальнейшем заменить на HAL_ ...)
 #define MAX6675_OK  true
 #define MAX6675_ERROR   false
 
