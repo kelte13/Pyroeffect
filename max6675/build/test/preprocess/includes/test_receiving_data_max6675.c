@@ -1,0 +1,4 @@
+---
+- C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/ceedling-0.31.1/vendor/unity/src/unity.h
+- src/receiving_data_max6675.h
+- build/test/mocks/mock_HAL_SPI_Received.h
