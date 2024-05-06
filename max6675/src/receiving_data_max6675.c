@@ -8,12 +8,12 @@ bool Max6675_Read_Reg(uint16_t *reg) {
     if (hal_answer == 1) {
         //проверка работается ли модуль
         if (temp[1] & 0x04) {
-            return  MAX6675_ERROR;
+            return MAX6675_ERROR;
         }
         //преобразование полученных данных
-        *reg = (uint16_t)(temp[1] >> 3);
-        *reg |= (uint16_t)(temp[0] << 5);
-        return MAX6675_OK
+        *reg = (uint16_t) (temp[1] >> 3);
+        *reg |= (uint16_t) (temp[0] << 5);
+        return MAX6675_OK;
     }
-    return  MAX6675_ERROR;
+    return MAX6675_ERROR;
 }
