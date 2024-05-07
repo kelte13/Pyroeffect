@@ -2,8 +2,6 @@
 
 /*=======Automagically Detected Files To Include=====*/
 #include "unity.h"
-#include "cmock.h"
-#include "mock_HAL_SPI_Received.h"
 
 int GlobalExpectCount;
 int GlobalVerifyOrder;
@@ -12,8 +10,9 @@ char* GlobalOrderError;
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
 extern void tearDown(void);
-extern void test_receiving_data_max6675_if_spi_send_true(void);
-extern void test_receiving_data_max6675_if_spi_send_false(void);
+extern void test_Max6675_Temperature_received_4_and_return_1(void);
+extern void test_Max6675_Temperature_received_cant_be_negative(void);
+extern void test_Max6675_Temperature_above_max_temperature(void);
 
 
 /*=======Mock Management=====*/
@@ -22,15 +21,12 @@ static void CMock_Init(void)
   GlobalExpectCount = 0;
   GlobalVerifyOrder = 0;
   GlobalOrderError = NULL;
-  mock_HAL_SPI_Received_Init();
 }
 static void CMock_Verify(void)
 {
-  mock_HAL_SPI_Received_Verify();
 }
 static void CMock_Destroy(void)
 {
-  mock_HAL_SPI_Received_Destroy();
 }
 
 /*=======Test Reset Options=====*/
@@ -80,10 +76,10 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 /*=======MAIN=====*/
 int main(void)
 {
-  UnityBegin("test_receiving_data_max6675.c");
-  run_test(test_receiving_data_max6675_if_spi_send_true, "test_receiving_data_max6675_if_spi_send_true", 18);
-  run_test(test_receiving_data_max6675_if_spi_send_false, "test_receiving_data_max6675_if_spi_send_false", 24);
+  UnityBegin("test_Max6675_Temperature.c");
+  run_test(test_Max6675_Temperature_received_4_and_return_1, "test_Max6675_Temperature_received_4_and_return_1", 17);
+  run_test(test_Max6675_Temperature_received_cant_be_negative, "test_Max6675_Temperature_received_cant_be_negative", 23);
+  run_test(test_Max6675_Temperature_above_max_temperature, "test_Max6675_Temperature_above_max_temperature", 32);
 
-  CMock_Guts_MemFreeFinal();
   return UnityEnd();
 }

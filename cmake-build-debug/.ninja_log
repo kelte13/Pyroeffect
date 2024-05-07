@@ -19,3 +19,9 @@
 66	164	7367329216752570	Pyroeffect.exe	332ff1d602a1b416
 1	70	7367332119509760	CMakeFiles/Pyroeffect.dir/max6675/src/HAL_SPI_Received.c.obj	890a6d34a64a06e3
 71	174	7367332120287672	Pyroeffect.exe	332ff1d602a1b416
+4	312	7367978216842481	CMakeFiles/Pyroeffect.dir/max6675/src/main.c.obj	e13e0aaf3b955baf
+37	312	7367978216842481	CMakeFiles/Pyroeffect.dir/max6675/src/receiving_data_max6675.c.obj	655b8117c665cf92
+44	313	7367978216842481	CMakeFiles/Pyroeffect.dir/max6675/src/HAL_SPI_Received.c.obj	890a6d34a64a06e3
+313	659	7367978220054807	Pyroeffect.exe	332ff1d602a1b416
+1	90	7367980194467776	CMakeFiles/Pyroeffect.dir/max6675/src/Max6675_Temperature.c.obj	dd31cd334f84f62c
+90	196	7367980195249876	Pyroeffect.exe	332ff1d602a1b416

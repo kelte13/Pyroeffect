@@ -6,7 +6,7 @@ int main()
 {
     uint16_t reg = 0;
     float temperature = 0;
-    bool answer = Max6675_Read_Reg(&reg);
+    bool answer = Max6675_Read_Reg(&reg, true);
     if (answer == MAX6675_OK) {
         temperature = Max6675_Temperature(reg);
     }
