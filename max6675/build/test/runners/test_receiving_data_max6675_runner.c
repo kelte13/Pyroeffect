@@ -13,6 +13,7 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_receiving_data_max6675_if_spi_send_true(void);
+extern void test_receiving_data_max6675_if_spi_send_false(void);
 
 
 /*=======Mock Management=====*/
@@ -81,6 +82,7 @@ int main(void)
 {
   UnityBegin("test_receiving_data_max6675.c");
   run_test(test_receiving_data_max6675_if_spi_send_true, "test_receiving_data_max6675_if_spi_send_true", 18);
+  run_test(test_receiving_data_max6675_if_spi_send_false, "test_receiving_data_max6675_if_spi_send_false", 24);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();
