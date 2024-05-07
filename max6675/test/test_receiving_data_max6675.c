@@ -25,6 +25,7 @@ void test_receiving_data_max6675_if_spi_send_false(void)
 {
     uint16_t temp = 0;
     HAL_SPI_Received_ExpectAndReturn(false, false);
+
     TEST_ASSERT_FALSE(Max6675_Read_Reg(&temp));
 }
 
