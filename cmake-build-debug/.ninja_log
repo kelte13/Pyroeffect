@@ -12,3 +12,7 @@
 7	67	7370573210922766	CMakeFiles/Pyroeffect.dir/max6675/src/delete_data_from_file.c.obj	aa931e0e8100f440
 1	69	7370573210937809	CMakeFiles/Pyroeffect.dir/max6675/src/write_to_file.c.obj	ac24bb4d9d5ae022
 69	172	7370573211684398	Pyroeffect.exe	d0b756ca452bb002
+2	81	7370578459474070	CMakeFiles/Pyroeffect.dir/max6675/src/write_to_file.c.obj	ac24bb4d9d5ae022
+81	199	7370578460335234	Pyroeffect.exe	d0b756ca452bb002
+2	82	7370579631512018	CMakeFiles/Pyroeffect.dir/max6675/src/write_to_file.c.obj	ac24bb4d9d5ae022
+83	222	7370579632548907	Pyroeffect.exe	d0b756ca452bb002

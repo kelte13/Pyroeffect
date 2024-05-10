@@ -16,6 +16,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using LiveCharts.Wpf;
+using System.IO;
+using System.Xml.Linq;
 
 namespace Pyroeffect
 {
@@ -26,14 +28,15 @@ namespace Pyroeffect
     {
         public SeriesCollection SeriesCollection { get; set; }
 
-        private List<uint> data;
+        private List<string> data;
+        private int currentIndex = 0;
 
         public MainWindow()
         {
             InitializeComponent();
 
             // Инициализация данных примером случайных значений (замените этот код на ваш ввод данных)
-            data = new List<uint>();
+            data = new List<string>();
             RandomizeData();
 
             // Создание серии данных для графика
@@ -48,7 +51,7 @@ namespace Pyroeffect
 
             // Запуск таймера для обновления данных графика в реальном времени
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Interval = TimeSpan.FromMilliseconds(250);
             timer.Tick += Timer_Tick;
             timer.Start();
 
@@ -58,30 +61,35 @@ namespace Pyroeffect
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            // Обновление данных графика
-            RandomizeData();
-            UpdateChart();
+            // Добавление нового значения на график
+            if (currentIndex < data.Count)
+            {
+                string value = data[currentIndex];
+                string value1 = value.Replace('.', ',');
+                if (double.TryParse(value1, out double numericValue))
+                {
+                    SeriesCollection[0].Values.Add(new ObservableValue(numericValue));
+                    currentIndex++;
+                }
+                else
+                {
+                    // Handle the case where value is not a valid double
+                    // For example, you can log a warning or skip adding this value to the chart
+                }
+            }
         }
 
         private void RandomizeData()
         {
-            Random random = new Random();
-            data.Clear();
-            for (int i = 0; i < 10; i++)
+            // Считывание данных из файла и добавление их в список
+            using (StreamReader sr = new StreamReader("C:\\Users\\DMITRIY\\Documents\\GitHub\\Pyroeffect\\max6675\\file\\temperature.txt"))
             {
-                data.Add((uint)random.Next(0, ushort.MaxValue));
-            }
-        }
-
-        private void UpdateChart()
-        {
-            // Очистка старых значений
-            SeriesCollection[0].Values.Clear();
-
-            // Добавление новых значений
-            foreach (uint value in data)
-            {
-                SeriesCollection[0].Values.Add(new ObservableValue(value));
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                    data.Add(line);
+                }
             }
         }
     }
