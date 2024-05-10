@@ -11,4 +11,6 @@ add_executable(Pyroeffect
         max6675/src/Max6675_Temperature.h
         max6675/src/receiving_data_max6675.c
         max6675/src/receiving_data_max6675.h
-        max6675/src/HAL_SPI_Received.c)
+        max6675/src/HAL_SPI_Received.c
+        max6675/src/write_to_file.c
+        max6675/src/write_to_file.c)

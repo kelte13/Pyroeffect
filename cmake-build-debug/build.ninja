@@ -77,6 +77,13 @@ build CMakeFiles/Pyroeffect.dir/max6675/src/HAL_SPI_Received.c.obj: C_COMPILER__
   OBJECT_DIR = CMakeFiles\Pyroeffect.dir
   OBJECT_FILE_DIR = CMakeFiles\Pyroeffect.dir\max6675\src
 
+build CMakeFiles/Pyroeffect.dir/max6675/src/write_to_file.c.obj: C_COMPILER__Pyroeffect_unscanned_Debug C$:/Users/DMITRIY/Documents/GitHub/Pyroeffect/max6675/src/write_to_file.c || cmake_object_order_depends_target_Pyroeffect
+  DEP_FILE = CMakeFiles\Pyroeffect.dir\max6675\src\write_to_file.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/DMITRIY/Documents/GitHub/Pyroeffect/max6675/src
+  OBJECT_DIR = CMakeFiles\Pyroeffect.dir
+  OBJECT_FILE_DIR = CMakeFiles\Pyroeffect.dir\max6675\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Pyroeffect
@@ -85,7 +92,7 @@ build CMakeFiles/Pyroeffect.dir/max6675/src/HAL_SPI_Received.c.obj: C_COMPILER__
 #############################################
 # Link the executable Pyroeffect.exe
 
-build Pyroeffect.exe: C_EXECUTABLE_LINKER__Pyroeffect_Debug CMakeFiles/Pyroeffect.dir/max6675/src/main.c.obj CMakeFiles/Pyroeffect.dir/max6675/src/Max6675_Temperature.c.obj CMakeFiles/Pyroeffect.dir/max6675/src/receiving_data_max6675.c.obj CMakeFiles/Pyroeffect.dir/max6675/src/HAL_SPI_Received.c.obj
+build Pyroeffect.exe: C_EXECUTABLE_LINKER__Pyroeffect_Debug CMakeFiles/Pyroeffect.dir/max6675/src/main.c.obj CMakeFiles/Pyroeffect.dir/max6675/src/Max6675_Temperature.c.obj CMakeFiles/Pyroeffect.dir/max6675/src/receiving_data_max6675.c.obj CMakeFiles/Pyroeffect.dir/max6675/src/HAL_SPI_Received.c.obj CMakeFiles/Pyroeffect.dir/max6675/src/write_to_file.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Pyroeffect.dir
