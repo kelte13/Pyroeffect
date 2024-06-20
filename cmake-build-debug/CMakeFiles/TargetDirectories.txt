@@ -1,0 +1,3 @@
+C:/Users/DMITRIY/Documents/GitHub/Pyroeffect/cmake-build-debug/CMakeFiles/Pyroeffect.dir
+C:/Users/DMITRIY/Documents/GitHub/Pyroeffect/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/DMITRIY/Documents/GitHub/Pyroeffect/cmake-build-debug/CMakeFiles/rebuild_cache.dir

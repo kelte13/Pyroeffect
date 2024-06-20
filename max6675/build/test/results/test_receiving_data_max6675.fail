@@ -1,0 +1,23 @@
+---
+:source:
+  :path: test
+  :file: test_receiving_data_max6675.c
+:successes:
+- :test: test_receiving_data_max6675_if_spi_send_true
+  :line: 18
+  :message: ''
+  :unity_test_time: 0
+:failures:
+- :test: test_receiving_data_max6675_if_spi_send_false
+  :line: 27
+  :message: Memory Mismatch. Byte 0 Expected 0x00 Was 0x01. Function HAL_SPI_Received
+    Argument result. Function called with unexpected argument value.
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 2
+  :passed: 1
+  :failed: 1
+  :ignored: 0
+:stdout: []
+:time: 0.04497669998090714
